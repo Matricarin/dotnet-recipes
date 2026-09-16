@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Recipes.Models\Recipes.Models.csproj" />
+    <ProjectReference Include="..\Recipes.Manager\Recipes.Manager.csproj" />
+    <ProjectReference Include="..\Recipes.Storage\Recipes.Storage.csproj" />
   </ItemGroup>
 
 </Project>
