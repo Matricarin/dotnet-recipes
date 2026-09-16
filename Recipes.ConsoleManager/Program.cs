@@ -2,7 +2,7 @@
 
 using Spectre.Console;
 
-var menu = new Menu();
+var menu = new RecipesApp();
 
 while (menu.IsAppRunning)
 {

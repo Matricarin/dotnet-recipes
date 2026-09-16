@@ -4,7 +4,7 @@ using Spectre.Console.Rendering;
 
 namespace Recipes.ConsoleManager;
 
-public sealed class Menu : IRenderable
+public sealed class RecipesApp : IRenderable
 {
     public bool IsAppRunning { get; set; } = true;
 
