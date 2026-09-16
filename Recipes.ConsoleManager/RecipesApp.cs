@@ -1,5 +1,6 @@
 ﻿using Recipes.ConsoleManager.Models;
 
+using Spectre.Console;
 using Spectre.Console.Rendering;
 
 namespace Recipes.ConsoleManager;
@@ -15,11 +16,13 @@ public sealed class RecipesApp : IRenderable
 
     public Measurement Measure(RenderOptions options, int maxWidth)
     {
-        throw new NotImplementedException();
+        return new Measurement();
     }
 
     public IEnumerable<Segment> Render(RenderOptions options, int maxWidth)
     {
-        throw new NotImplementedException();
+       var item = AnsiConsole.Prompt(new SelectionPrompt<MenuItem>().AddChoices(_items));
+
+        yield return new Segment(item.ToString());
     }
 }
